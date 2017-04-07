@@ -1,5 +1,5 @@
 {
-  "name": "Han/phpRouter",
+  "name": "han/php_router",
   "description": "Simple Router for PHP",
   "minimum-stability": "stable",
   "license": "proprietary",
