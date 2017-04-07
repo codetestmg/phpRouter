@@ -1,0 +1,12 @@
+{
+  "name": "Han/phpRouter",
+  "description": "Simple Router for PHP",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "han Woolderink",
+      "email": "hello@hanwoolderink.nl"
+    }
+  ]
+}
