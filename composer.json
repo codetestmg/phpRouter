@@ -8,5 +8,10 @@
       "name": "han Woolderink",
       "email": "hello@hanwoolderink.nl"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-0": {
+      "Han\\": "/"
+    }
+  }
 }
