@@ -4,10 +4,6 @@ namespace Han\Router;
 
 /**
  * Class Router
- * @package App\Router
- */
-/**
- * Class Router
  * @package Han\Router
  */
 class Router
@@ -127,7 +123,7 @@ class Router
      * @param string $method
      * @return bool
      */
-    private function isRouteMethod(string $method): bool
+    private function isRouteMethod($method)
     {
         $method = trim(strtoupper($method));
 
@@ -257,7 +253,7 @@ class Router
     {
         if (isset($_SESSION) && isset($_SESSION['hw_router_params']['used'])) {
             $used = (int)$_SESSION['hw_router_params']['used'];
-            if($used === 1) {
+            if ($used === 1) {
                 $_SESSION['hw_router_params'] = [];
                 return true;
             } else {

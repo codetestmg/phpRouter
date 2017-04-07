@@ -16,10 +16,10 @@ $router->addRoute('home', '/', ExampleController::class, 'index', 'GET');
 $router->addRoute('user', '/user', UserController::class, 'user', 'GET');
 $router->addRoute('newUserForm', '/user/new', UserController::class, 'newUserForm', 'GET');
 $router->addRoute('newUserData', '/user/new', UserController::class, 'newUserData', 'POST');
-$router->addRoute('showUser', '/user/{$username}', UserController::class, 'showUser', 'POST');
-$router->addRoute('deleteUser', '/user/{$username}', UserController::class, 'deleteUser', 'DELETE');
-$router->addRoute('editUserForm', '/user/{$username}/edit', UserController::class, 'editUserForm', 'GET');
-$router->addRoute('editUserData', '/user/{$username}/edit', UserController::class, 'editUserData', 'PUT');
+$router->addRoute('showUser', '/user/{username}', UserController::class, 'showUser', 'GET');
+$router->addRoute('deleteUser', '/user/{username}', UserController::class, 'deleteUser', 'DELETE');
+$router->addRoute('editUserForm', '/user/{username}/edit', UserController::class, 'editUserForm', 'GET');
+$router->addRoute('editUserData', '/user/{username}/edit', UserController::class, 'editUserData', 'PUT');
 
 // actual routing
 // param $_GET['path'] is set by apache in this example, look in the .htaccess file
@@ -29,8 +29,7 @@ class ExampleController
 {
     public function index()
     {
-        echo 'index page';
-        return true;
+        return 'index page';
     }
 }
 
@@ -38,43 +37,36 @@ class UserController
 {
     public function user()
     {
-        echo 'Show all users';
-        return true;
+        return 'Show all users';
     }
 
     public function newUserForm()
     {
-        echo 'New user form';
-        return true;
+        return 'New user form';
     }
 
     public function newUserData()
     {
-        echo 'Post route for adding new user';
-        return true;
+        return 'Post route for adding new user';
     }
 
     public function showUser($username)
     {
-        echo "Show user {$username}";
-        return true;
+        return "Show user {$username}";
     }
 
     public function deleteUser($username)
     {
-        echo "Delete user {$username}";
-        return true;
+        return "Delete user {$username}";
     }
 
     public function editUserForm($username)
     {
-        echo "Edit form for user {$username}";
-        return true;
+        return "Edit form for user {$username}";
     }
 
     public function editUserData($username)
     {
-        echo "Edit POST route for user {$username}";
-        return true;
+        return "Edit POST route for user {$username}";
     }
 }
